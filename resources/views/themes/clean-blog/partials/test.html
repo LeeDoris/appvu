@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <title>Vue.js Feed</title>
+
+    <meta name="site_name" content="Vue.js Feed"/>
+    <meta property="og:site_name" content="Vue.js Feed"/>
+
+    <meta name="url" content="https://vuejsfeed.com/category/Code"/>
+    <meta property="og:url" content="https://vuejsfeed.com/category/Code"/>
+
+    <meta name="locale" content="en_US"/>
+    <meta property="og:locale" content="en_US"/>
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="vuejsfeed"/>
+
+
+    <!-- Custom styles for this template -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/github-gist.min.css">
+    <link rel="stylesheet" href="https://vuejsfeed.com/css/main.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700:latin' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:700,900:latin' rel='stylesheet' type='text/css'>
+
+    <!-- google-analytics -->
+
+</head>
+<body>
+
+<!-- header -->
+<header class="header  push-down-45">
+    <div class="container">
+
+        <div class="logo  pull-left">
+            <a href="https://vuejsfeed.com"><img src="/img/vuejsfeed-medium.png" alt="Logo"></a>
+        </div>
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#readable-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+
+        <nav class="navbar  navbar-default" role="navigation">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse  navbar-collapse" id="readable-navbar-collapse">
+                <ul class="navigation">
+
+                    <li class="">
+                        <a href="https://vuejsfeed.com/category/News">News</a>
+                    </li>
+                    <li class="">
+                        <a href="https://vuejsfeed.com/category/Plugins">Plugins</a>
+                    </li>
+                    <li class="">
+                        <a href="https://vuejsfeed.com/category/Tutorials">Tutorials</a>
+                    </li>
+                    <li class="">
+                        <a href="https://vuejsfeed.com/category/Showcase">Showcase</a>
+                    </li>
+                    <li class="">
+                        <a href="https://vuejsfeed.com/category/Code">Code</a>
+                    </li>
+                    <li class="">
+                        <a href="/submit">Submit yours <i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+
+        <nav class="navbar  navbar-default pull-right" role="navigation">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse  navbar-collapse" id="readable-navbar-collapse">
+                <ul class="navigation">
+                    <li>
+                        <a href="#" class="search-navbar  js--toggle-search-mode">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="user-container">
+                        <a href="/login">Login <i class="fa fa-sign-in" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+
+
+        <!-- <div class="hidden-xs  hidden-sm">
+            </div> -->
+
+    </div>
+</header>
+
+
+<!-- Search - Open panel -->
+<div class="search-panel">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <form action="https://vuejsfeed.com/search" method="get">
+                    <input type="text" class="search-panel__form  js--search-panel-text"
+                           placeholder="Begin typing for search" name="query">
+                    <p class="search-panel__text">Press enter to see results or esc to cancel.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <!--End mc_embed_signup-->
+        <div class="col-xs-12  col-md-8">
+            <!-- Subscribe Box -->
+            <div class="boxed  push-down-45">
+                <div class="meta"></div>
+                <div class="row">
+                    <div class="col-xs-10  col-xs-offset-1">
+                        <!-- Start of the content -->
+                        <div class="post-content--front-page subscribe">
+                            <h2 class="front-page-title">Subscribe to our newsletter</h2>
+                            <hr>
+                            <h3>The latest Vue.js news, tutorials, plugins, and more, in your inbox every week!</h3>
+                            <div id="revue-embed">
+                                <form action="https://www.getrevue.co/profile/vuejs-news/add_subscriber" method="post"
+                                      id="revue-form" name="revue-form" target="_blank">
+                                    <div class="revue-form-group">
+                                        <input class="revue-form-field form-control" placeholder="Your email address..."
+                                               type="email" name="member[email]" id="member_email">
+                                    </div>
+                                    <div class="revue-form-actions">
+                                        <input type="submit" value="Subscribe" name="member[subscribe]"
+                                               id="member_submit" class="btn btn-info btn-block">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1>Code</h1>
+            <hr>
+            <!-- Post with featured image -->
+            <div class="boxed  push-down-45">
+                <!-- Featured image and meta start -->
+                <div class="meta">
+                    <img class="wp-post-image"
+                         src="https://d2jq2hx2dbkw6t.cloudfront.net/224/hapi-vue-nodemon-webapck-eslint-karma-mocha-chai.png"
+                         alt="Blog image" width="748"
+                         height="324">
+                    <div class="meta__container">
+                        <div class="row">
+                            <div class="col-xs-12  col-sm-8">
+                                <div class="meta__info">
+                                            <span class="meta__author">
+                                                <img src="https://www.gravatar.com/avatar/421f270bc11513184dcd25eb371ef7d0"
+                                                     alt="Meta avatar" width="30"
+                                                     height="30">
+                                                <a href="#">kostas maniatis</a>
+
+                                                                                                    in <a
+                                                    href="#">News</a>
+
+
+                                            </span>
+                                    <span class="meta__date"><span
+                                            class="glyphicon glyphicon-calendar"></span>  &nbsp; 13 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-12  col-sm-4">
+                                <div class="meta__comments">
+                                    <span class="glyphicon glyphicon-comment"></span> &nbsp;
+                                    <a href="https://vuejsfeed.com/blog/new-project-template-for-vue-cli-hapi-vue#disqus_thread"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Featured image and meta end -->
+
+                <!-- Start of the blogpost -->
+                <div class="row">
+                    <div class="col-xs-10  col-xs-offset-1">
+
+                        <!-- Start of the content -->
+                        <div class="post-content--front-page">
+                            <h2 class="front-page-title">
+                                <a href="https://vuejsfeed.com/blog/new-project-template-for-vue-cli-hapi-vue">New
+                                    project template for vue-cli: Hapi Vue</a>
+                            </h2>
+                            <h3>The template for vue-cli for Vue.js 2 includes HapiJS (API), setup run on Gulp,
+                                BrowserSync, Nodemon, Webpack HMR, with independent hot reload and restart, ESLint, and
+                                Unit Testing</h3>
+                        </div>
+
+                        <!-- End of the content -->
+                        <a href="https://vuejsfeed.com/blog/new-project-template-for-vue-cli-hapi-vue">
+                            <div class="read-more">
+                                Continue reading
+                                <div class="read-more__arrow">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Post with featured image -->
+            <div class="boxed  push-down-45">
+                <!-- Featured image and meta start -->
+                <div class="meta">
+                    <img class="wp-post-image" src="https://d2jq2hx2dbkw6t.cloudfront.net/217/vue-apollo-graph.png"
+                         alt="Blog image" width="748"
+                         height="324">
+                    <div class="meta__container">
+                        <div class="row">
+                            <div class="col-xs-12  col-sm-8">
+                                <div class="meta__info">
+                                            <span class="meta__author">
+                                                <img src="https://www.gravatar.com/avatar/421f270bc11513184dcd25eb371ef7d0"
+                                                     alt="Meta avatar" width="30"
+                                                     height="30">
+                                                <a href="#">kostas maniatis</a>
+
+                                                                                                    in <a href="#">Tutorials</a>
+
+
+                                            </span>
+                                    <span class="meta__date"><span
+                                            class="glyphicon glyphicon-calendar"></span>  &nbsp; 2 days ago</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-12  col-sm-4">
+                                <div class="meta__comments">
+                                    <span class="glyphicon glyphicon-comment"></span> &nbsp;
+                                    <a href="https://vuejsfeed.com/blog/use-apollo-in-your-vue-js-app#disqus_thread"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Featured image and meta end -->
+
+                <!-- Start of the blogpost -->
+                <div class="row">
+                    <div class="col-xs-10  col-xs-offset-1">
+
+                        <!-- Start of the content -->
+                        <div class="post-content--front-page">
+                            <h2 class="front-page-title">
+                                <a href="https://vuejsfeed.com/blog/use-apollo-in-your-vue-js-app">Use Apollo in your
+                                    Vue.js app</a>
+                            </h2>
+                            <h3>This tutorial will help you to write GraphQL queries in your Vue.js components while
+                                using Apollo under the hood.</h3>
+                        </div>
+
+                        <!-- End of the content -->
+                        <a href="https://vuejsfeed.com/blog/use-apollo-in-your-vue-js-app">
+                            <div class="read-more">
+                                Continue reading
+                                <div class="read-more__arrow">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Post with featured image -->
+            <div class="boxed  push-down-45">
+                <!-- Featured image and meta start -->
+                <div class="meta">
+                    <img class="wp-post-image" src="https://d2jq2hx2dbkw6t.cloudfront.net/215/vue-meta.png"
+                         alt="Blog image" width="748"
+                         height="324">
+                    <div class="meta__container">
+                        <div class="row">
+                            <div class="col-xs-12  col-sm-8">
+                                <div class="meta__info">
+                                            <span class="meta__author">
+                                                <img src="https://www.gravatar.com/avatar/421f270bc11513184dcd25eb371ef7d0"
+                                                     alt="Meta avatar" width="30"
+                                                     height="30">
+                                                <a href="#">kostas maniatis</a>
+
+                                                                                                    in <a
+                                                    href="#">Code</a>
+
+
+                                            </span>
+                                    <span class="meta__date"><span
+                                            class="glyphicon glyphicon-calendar"></span>  &nbsp; 3 days ago</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-12  col-sm-4">
+                                <div class="meta__comments">
+                                    <span class="glyphicon glyphicon-comment"></span> &nbsp;
+                                    <a href="https://vuejsfeed.com/blog/manage-page-meta-info-in-vue-2-0-components#disqus_thread"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Featured image and meta end -->
+
+                <!-- Start of the blogpost -->
+                <div class="row">
+                    <div class="col-xs-10  col-xs-offset-1">
+
+                        <!-- Start of the content -->
+                        <div class="post-content--front-page">
+                            <h2 class="front-page-title">
+                                <a href="https://vuejsfeed.com/blog/manage-page-meta-info-in-vue-2-0-components">Manage
+                                    page meta info in Vue 2.0 components</a>
+                            </h2>
+                            <h3>Vue-meta is a Vue 2.0 plugin, that allows you to manage your app&#039;s meta
+                                information</h3>
+                        </div>
+
+                        <!-- End of the content -->
+                        <a href="https://vuejsfeed.com/blog/manage-page-meta-info-in-vue-2-0-components">
+                            <div class="read-more">
+                                Continue reading
+                                <div class="read-more__arrow">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Post with featured image -->
+            <div class="boxed  push-down-45">
+                <!-- Featured image and meta start -->
+                <div class="meta">
+                    <img class="wp-post-image" src="https://d2jq2hx2dbkw6t.cloudfront.net/212/vuelm-demo-elm.png"
+                         alt="Blog image" width="748"
+                         height="324">
+                    <div class="meta__container">
+                        <div class="row">
+                            <div class="col-xs-12  col-sm-8">
+                                <div class="meta__info">
+                                            <span class="meta__author">
+                                                <img src="https://www.gravatar.com/avatar/421f270bc11513184dcd25eb371ef7d0"
+                                                     alt="Meta avatar" width="30"
+                                                     height="30">
+                                                <a href="#">kostas maniatis</a>
+
+                                                                                                    in <a
+                                                    href="#">Code</a>
+
+
+                                            </span>
+                                    <span class="meta__date"><span
+                                            class="glyphicon glyphicon-calendar"></span>  &nbsp; 4 days ago</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-12  col-sm-4">
+                                <div class="meta__comments">
+                                    <span class="glyphicon glyphicon-comment"></span> &nbsp;
+                                    <a href="https://vuejsfeed.com/blog/elm-inspired-application-state-management-for-vue-js#disqus_thread"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Featured image and meta end -->
+
+                <!-- Start of the blogpost -->
+                <div class="row">
+                    <div class="col-xs-10  col-xs-offset-1">
+
+                        <!-- Start of the content -->
+                        <div class="post-content--front-page">
+                            <h2 class="front-page-title">
+                                <a href="https://vuejsfeed.com/blog/elm-inspired-application-state-management-for-vue-js">Elm-inspired
+                                    Application State Management for Vue.js.</a>
+                            </h2>
+                            <h3>VuElm : State management for Vue.js, inspired by Elm architecture.</h3>
+                        </div>
+
+                        <!-- End of the content -->
+                        <a href="https://vuejsfeed.com/blog/elm-inspired-application-state-management-for-vue-js">
+                            <div class="read-more">
+                                Continue reading
+                                <div class="read-more__arrow">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Post with featured image -->
+            <div class="boxed  push-down-45">
+                <!-- Featured image and meta start -->
+                <div class="meta">
+                    <img class="wp-post-image" src="https://d2jq2hx2dbkw6t.cloudfront.net/209/vue-javascript-game.png"
+                         alt="Blog image" width="748"
+                         height="324">
+                    <div class="meta__container">
+                        <div class="row">
+                            <div class="col-xs-12  col-sm-8">
+                                <div class="meta__info">
+                                            <span class="meta__author">
+                                                <img src="https://www.gravatar.com/avatar/b0c94029e76819e3c737087efb006fad"
+                                                     alt="Meta avatar" width="30"
+                                                     height="30">
+                                                <a href="#">Alex Kyriakidis</a>
+
+                                                                                                    in <a href="#">Showcase</a>
+
+
+                                            </span>
+                                    <span class="meta__date"><span
+                                            class="glyphicon glyphicon-calendar"></span>  &nbsp; 6 days ago</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-12  col-sm-4">
+                                <div class="meta__comments">
+                                    <span class="glyphicon glyphicon-comment"></span> &nbsp;
+                                    <a href="https://vuejsfeed.com/blog/javascript-guessing-game-built-with-vue-js#disqus_thread"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Featured image and meta end -->
+
+                <!-- Start of the blogpost -->
+                <div class="row">
+                    <div class="col-xs-10  col-xs-offset-1">
+
+                        <!-- Start of the content -->
+                        <div class="post-content--front-page">
+                            <h2 class="front-page-title">
+                                <a href="https://vuejsfeed.com/blog/javascript-guessing-game-built-with-vue-js">JavaScript
+                                    Guessing Game built with Vue.js</a>
+                            </h2>
+                            <h3>JavaScript Guessing Game is a browser quiz game built with Vue.js, including more than
+                                100 JavaScript frameworks and libraries to test your knowledge on the JS ecosystem.</h3>
+                        </div>
+
+                        <!-- End of the content -->
+                        <a href="https://vuejsfeed.com/blog/javascript-guessing-game-built-with-vue-js">
+                            <div class="read-more">
+                                Continue reading
+                                <div class="read-more__arrow">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Post with featured image -->
+            <div class="boxed  push-down-45">
+                <!-- Featured image and meta start -->
+                <div class="meta">
+                    <img class="wp-post-image" src="https://d2jq2hx2dbkw6t.cloudfront.net/207/vue-socket.png"
+                         alt="Blog image" width="748"
+                         height="324">
+                    <div class="meta__container">
+                        <div class="row">
+                            <div class="col-xs-12  col-sm-8">
+                                <div class="meta__info">
+                                            <span class="meta__author">
+                                                <img src="https://www.gravatar.com/avatar/421f270bc11513184dcd25eb371ef7d0"
+                                                     alt="Meta avatar" width="30"
+                                                     height="30">
+                                                <a href="#">kostas maniatis</a>
+
+                                                                                                    in <a
+                                                    href="#">Code</a>
+
+
+                                            </span>
+                                    <span class="meta__date"><span
+                                            class="glyphicon glyphicon-calendar"></span>  &nbsp; 1 week ago</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-12  col-sm-4">
+                                <div class="meta__comments">
+                                    <span class="glyphicon glyphicon-comment"></span> &nbsp;
+                                    <a href="https://vuejsfeed.com/blog/vue-socket-io-socket-io-with-vue-js#disqus_thread"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Featured image and meta end -->
+
+                <!-- Start of the blogpost -->
+                <div class="row">
+                    <div class="col-xs-10  col-xs-offset-1">
+
+                        <!-- Start of the content -->
+                        <div class="post-content--front-page">
+                            <h2 class="front-page-title">
+                                <a href="https://vuejsfeed.com/blog/vue-socket-io-socket-io-with-vue-js">Vue-Socket.io:
+                                    Socket.io with Vue.js</a>
+                            </h2>
+                            <h3>Vue-Socket.io is a socket.io implemantation for Vuejs 2.0 and 1.0</h3>
+                        </div>
+
+                        <!-- End of the content -->
+                        <a href="https://vuejsfeed.com/blog/vue-socket-io-socket-io-with-vue-js">
+                            <div class="read-more">
+                                Continue reading
+                                <div class="read-more__arrow">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Post with featured image -->
+            <div class="boxed  push-down-45">
+                <!-- Featured image and meta start -->
+                <div class="meta">
+                    <img class="wp-post-image" src="https://d2jq2hx2dbkw6t.cloudfront.net/204/copilot-vue-adminlte.png"
+                         alt="Blog image" width="748"
+                         height="324">
+                    <div class="meta__container">
+                        <div class="row">
+                            <div class="col-xs-12  col-sm-8">
+                                <div class="meta__info">
+                                            <span class="meta__author">
+                                                <img src="https://www.gravatar.com/avatar/421f270bc11513184dcd25eb371ef7d0"
+                                                     alt="Meta avatar" width="30"
+                                                     height="30">
+                                                <a href="#">kostas maniatis</a>
+
+                                                                                                    in <a
+                                                    href="#">Code</a>
+
+
+                                            </span>
+                                    <span class="meta__date"><span
+                                            class="glyphicon glyphicon-calendar"></span>  &nbsp; 1 week ago</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-12  col-sm-4">
+                                <div class="meta__comments">
+                                    <span class="glyphicon glyphicon-comment"></span> &nbsp;
+                                    <a href="https://vuejsfeed.com/blog/copilot-responsive-admin-template-made-with-vue-js#disqus_thread"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Featured image and meta end -->
+
+                <!-- Start of the blogpost -->
+                <div class="row">
+                    <div class="col-xs-10  col-xs-offset-1">
+
+                        <!-- Start of the content -->
+                        <div class="post-content--front-page">
+                            <h2 class="front-page-title">
+                                <a href="https://vuejsfeed.com/blog/copilot-responsive-admin-template-made-with-vue-js">CoPilot:
+                                    Responsive admin template made with Vue.js</a>
+                            </h2>
+                            <h3>CoPilot is a responsive admin template based on AdminLTE made with Vue.js 2.0, with
+                                selected plugins/features but highly customizable.</h3>
+                        </div>
+
+                        <!-- End of the content -->
+                        <a href="https://vuejsfeed.com/blog/copilot-responsive-admin-template-made-with-vue-js">
+                            <div class="read-more">
+                                Continue reading
+                                <div class="read-more__arrow">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Post with featured image -->
+            <div class="boxed  push-down-45">
+                <!-- Featured image and meta start -->
+                <div class="meta">
+                    <img class="wp-post-image" src="https://d2jq2hx2dbkw6t.cloudfront.net/202/vuikit-uikit.png"
+                         alt="Blog image" width="748"
+                         height="324">
+                    <div class="meta__container">
+                        <div class="row">
+                            <div class="col-xs-12  col-sm-8">
+                                <div class="meta__info">
+                                            <span class="meta__author">
+                                                <img src="https://www.gravatar.com/avatar/421f270bc11513184dcd25eb371ef7d0"
+                                                     alt="Meta avatar" width="30"
+                                                     height="30">
+                                                <a href="#">kostas maniatis</a>
+
+                                                                                                    in <a
+                                                    href="#">Code</a>
+
+
+                                            </span>
+                                    <span class="meta__date"><span
+                                            class="glyphicon glyphicon-calendar"></span>  &nbsp; 1 week ago</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-12  col-sm-4">
+                                <div class="meta__comments">
+                                    <span class="glyphicon glyphicon-comment"></span> &nbsp;
+                                    <a href="https://vuejsfeed.com/blog/vuikit-a-collection-of-vue-components-built-on-top-of-the-uikit-framework#disqus_thread"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Featured image and meta end -->
+
+                <!-- Start of the blogpost -->
+                <div class="row">
+                    <div class="col-xs-10  col-xs-offset-1">
+
+                        <!-- Start of the content -->
+                        <div class="post-content--front-page">
+                            <h2 class="front-page-title">
+                                <a href="https://vuejsfeed.com/blog/vuikit-a-collection-of-vue-components-built-on-top-of-the-uikit-framework">Vuikit:
+                                    A collection of Vue components built on top of the UIkit framework</a>
+                            </h2>
+                            <h3>Vuikit is a collection of UI - Vue components, built on top of the UIkit framework,
+                                aiming to help build faster and avoiding having too many dependencies.</h3>
+                        </div>
+
+                        <!-- End of the content -->
+                        <a href="https://vuejsfeed.com/blog/vuikit-a-collection-of-vue-components-built-on-top-of-the-uikit-framework">
+                            <div class="read-more">
+                                Continue reading
+                                <div class="read-more__arrow">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Post with featured image -->
+            <div class="boxed  push-down-45">
+                <!-- Featured image and meta start -->
+                <div class="meta">
+                    <img class="wp-post-image" src="https://d2jq2hx2dbkw6t.cloudfront.net/201/migration-vue.png"
+                         alt="Blog image" width="748"
+                         height="324">
+                    <div class="meta__container">
+                        <div class="row">
+                            <div class="col-xs-12  col-sm-8">
+                                <div class="meta__info">
+                                            <span class="meta__author">
+                                                <img src="https://www.gravatar.com/avatar/421f270bc11513184dcd25eb371ef7d0"
+                                                     alt="Meta avatar" width="30"
+                                                     height="30">
+                                                <a href="#">kostas maniatis</a>
+
+                                                                                                    in <a
+                                                    href="#">News</a>
+
+
+                                            </span>
+                                    <span class="meta__date"><span
+                                            class="glyphicon glyphicon-calendar"></span>  &nbsp; 1 week ago</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-12  col-sm-4">
+                                <div class="meta__comments">
+                                    <span class="glyphicon glyphicon-comment"></span> &nbsp;
+                                    <a href="https://vuejsfeed.com/blog/the-migration-helper-for-vue-js-2-0-is-now-stable-and-officially-released#disqus_thread"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Featured image and meta end -->
+
+                <!-- Start of the blogpost -->
+                <div class="row">
+                    <div class="col-xs-10  col-xs-offset-1">
+
+                        <!-- Start of the content -->
+                        <div class="post-content--front-page">
+                            <h2 class="front-page-title">
+                                <a href="https://vuejsfeed.com/blog/the-migration-helper-for-vue-js-2-0-is-now-stable-and-officially-released">The
+                                    migration helper for Vue.js 2.0 is now stable and officially released.</a>
+                            </h2>
+                            <h3>The CLI tool to aid you in migration from Vue 1.x to 2.0 is now stable with its official
+                                release to help you in migrating your apps and projects.</h3>
+                        </div>
+
+                        <!-- End of the content -->
+                        <a href="https://vuejsfeed.com/blog/the-migration-helper-for-vue-js-2-0-is-now-stable-and-officially-released">
+                            <div class="read-more">
+                                Continue reading
+                                <div class="read-more__arrow">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Post with featured image -->
+            <div class="boxed  push-down-45">
+                <!-- Featured image and meta start -->
+                <div class="meta">
+                    <img class="wp-post-image" src="https://d2jq2hx2dbkw6t.cloudfront.net/200/jsfiddle-vuejs.png"
+                         alt="Blog image" width="748"
+                         height="324">
+                    <div class="meta__container">
+                        <div class="row">
+                            <div class="col-xs-12  col-sm-8">
+                                <div class="meta__info">
+                                            <span class="meta__author">
+                                                <img src="https://www.gravatar.com/avatar/421f270bc11513184dcd25eb371ef7d0"
+                                                     alt="Meta avatar" width="30"
+                                                     height="30">
+                                                <a href="#">kostas maniatis</a>
+
+                                                                                                    in <a
+                                                    href="#">Code</a>
+
+
+                                            </span>
+                                    <span class="meta__date"><span
+                                            class="glyphicon glyphicon-calendar"></span>  &nbsp; 1 week ago</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-12  col-sm-4">
+                                <div class="meta__comments">
+                                    <span class="glyphicon glyphicon-comment"></span> &nbsp;
+                                    <a href="https://vuejsfeed.com/blog/jsfiddle-starter-for-vue-js#disqus_thread"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Featured image and meta end -->
+
+                <!-- Start of the blogpost -->
+                <div class="row">
+                    <div class="col-xs-10  col-xs-offset-1">
+
+                        <!-- Start of the content -->
+                        <div class="post-content--front-page">
+                            <h2 class="front-page-title">
+                                <a href="https://vuejsfeed.com/blog/jsfiddle-starter-for-vue-js">JSFiddle starter for
+                                    Vue.js </a>
+                            </h2>
+                            <h3>A starter JSFiddle that uses the HTML window for the Vue template. </h3>
+                        </div>
+
+                        <!-- End of the content -->
+                        <a href="https://vuejsfeed.com/blog/jsfiddle-starter-for-vue-js">
+                            <div class="read-more">
+                                Continue reading
+                                <div class="read-more__arrow">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <nav class="center">
+                <ul class="pagination">
+                    <li class="disabled"><span>&laquo;</span></li>
+                    <li class="active"><span>1</span></li>
+                    <li><a href="https://vuejsfeed.com/category/Code?page=2">2</a></li>
+                    <li><a href="https://vuejsfeed.com/category/Code?page=3">3</a></li>
+                    <li><a href="https://vuejsfeed.com/category/Code?page=4">4</a></li>
+                    <li><a href="https://vuejsfeed.com/category/Code?page=5">5</a></li>
+                    <li><a href="https://vuejsfeed.com/category/Code?page=6">6</a></li>
+                    <li><a href="https://vuejsfeed.com/category/Code?page=2" rel="next">&raquo;</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="col-xs-12  col-md-4">
+            <!-- Widget author -->
+
+            <div class="sidebar  boxed  push-down-30">
+                <div class="row">
+                    <div class="col-xs-10  col-xs-offset-1">
+
+                        <!-- Widget featured post -->
+                        <div class="widget-featured-post  push-down-30">
+                            <h6>Featured post</h6>
+                            <a href="https://vuejsfeed.com/blog/announcing-vuedo">
+                                <img src="https://d2jq2hx2dbkw6t.cloudfront.net/17/vuedo post.png" alt="Featured post"
+                                     width="293" height="127">
+                                <h4>
+                                    Announcing Vuedo
+                                </h4>
+                                <p>Vuedo is a live example of how everything works together. The back-end is built with
+                                    Laravel and the front with Vue. A lot of libraries have been combined to develop
+                                    Vuedo, an open source blog platform.</p>
+                            </a>
+                        </div>
+
+                        <!-- Widget sponsor post -->
+                        <div class="widget-sponsor-box push-down-30">
+                            <h6>Sponsor</h6>
+                            <a href="https://leanpub.com/vuejs2">
+                                <img src="/img/majesty-vuejs-2.png" alt="The Majesty of Vue.js" class="img-responsive"
+                                     width="150">
+                            </a>
+                            <a href="https://leanpub.com/vuejs2" class="sponsor-title">
+                                The Majesty of Vue.js 2 (eBook)
+                            </a>
+                            <a href="mailto:team@vuejsfeed.com?Subject=Sponsor%20Vue.js%20Feed" class="become-sponsor">Become
+                                a sponsor</a>
+                        </div>
+
+                        <!-- Widget categories -->
+                        <div class="widget-categories push-down-30">
+                            <h6>Categories</h6>
+                            <ul>
+                                <li>
+                                    <a href="https://vuejsfeed.com/category/news">News &nbsp; <span
+                                            class="widget-categories__text">(50)</span> </a>
+                                </li>
+                                <li>
+                                    <a href="https://vuejsfeed.com/category/plugins">Plugins &nbsp; <span
+                                            class="widget-categories__text">(32)</span> </a>
+                                </li>
+                                <li>
+                                    <a href="https://vuejsfeed.com/category/tutorials">Tutorials &nbsp; <span
+                                            class="widget-categories__text">(52)</span> </a>
+                                </li>
+                                <li>
+                                    <a href="https://vuejsfeed.com/category/meetups">Meetups &nbsp; <span
+                                            class="widget-categories__text">(3)</span> </a>
+                                </li>
+                                <li>
+                                    <a href="https://vuejsfeed.com/category/featured">Featured &nbsp; <span
+                                            class="widget-categories__text">(1)</span> </a>
+                                </li>
+                                <li>
+                                    <a href="https://vuejsfeed.com/category/showcase">Showcase &nbsp; <span
+                                            class="widget-categories__text">(20)</span> </a>
+                                </li>
+                                <li>
+                                    <a href="https://vuejsfeed.com/category/code">Code &nbsp; <span
+                                            class="widget-categories__text">(54)</span> </a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <!-- Widget posts -->
+
+                        <!-- Widget submit -->
+                        <div class="widget-posts  push-down-30">
+                            <h6>Submit Yours</h6>
+                            <h5>
+                                <a href="/submit">Have you created or seen something awesome related to Vue.js? Submit
+                                    it here to share it with the community of Vue.js!</a>
+                            </h5>
+                            <a href="/submit" class="btn btn-primary btn-primary--transparent"><i
+                                    class="fa fa-pencil-square-o" aria-hidden="true"></i> Submit yours </a>
+                        </div>
+
+                        <!-- Widget Twitter -->
+                        <div class="widget-twitter  push-down-30">
+                            <h6>Twitter</h6>
+                            <a class="twitter-timeline" data-height="350" data-theme="light"
+                               data-link-color="#0097A7" href="https://twitter.com/vuejsfeed">Tweets by vuejsfeed</a>
+                            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+                        </div>
+                        <div class="social-icons  widget-social-icons  push-down-30">
+                            <h6>Stay in touch</h6>
+                            <a href="https://www.facebook.com/vuejsfeed" class="social-icons__container"><span
+                                    class="zocial-facebook"></span></a>
+                            <a href="https://twitter.com/vuejsfeed" class="social-icons__container"><span
+                                    class="zocial-twitter"></span></a>
+                            <a href="https://vuejsfeed.com/feed" class="social-icons__container"><span
+                                    class="zocial-rss"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="col-xs-12  col-md-4">
+            <div class="widget-about  push-down-30">
+                <span class="logo">
+                    <img src="/img/vuejsfeed-medium.png" alt="Logo"><br/>
+                </span>
+
+                <span class="footer__text"></span>
+                <br/>
+                <div class="social-icons  widget-social-icons">
+                    <a href="https://www.facebook.com/vuejsfeed" class="social-icons__container"><span
+                            class="zocial-facebook"></span></a>
+                    <a href="https://twitter.com/vuejsfeed" class="social-icons__container"><span
+                            class="zocial-twitter"></span></a>
+                    <a href="https://vuejsfeed.com/feed" class="social-icons__container"><span
+                            class="zocial-rss"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12  col-md-4">
+            <div class="tags  widget-tags">
+                <h6>Categories</h6>
+                <hr>
+                <a href="https://vuejsfeed.com/category/news" class="tags__link">News</a>
+                <a href="https://vuejsfeed.com/category/plugins" class="tags__link">Plugins</a>
+                <a href="https://vuejsfeed.com/category/tutorials" class="tags__link">Tutorials</a>
+                <a href="https://vuejsfeed.com/category/meetups" class="tags__link">Meetups</a>
+                <a href="https://vuejsfeed.com/category/featured" class="tags__link">Featured</a>
+                <a href="https://vuejsfeed.com/category/showcase" class="tags__link">Showcase</a>
+                <a href="https://vuejsfeed.com/category/code" class="tags__link">Code</a>
+            </div>
+        </div>
+        <div class="col-xs-12  col-md-4">
+            <div class="widget-contact  push-down-30">
+                <h6>Contact Us</h6>
+                <hr>
+                <span class="widget-contact__text">
+            <span class="widget-contact__title">team@vuejsfeed.com</span>
+        </span>
+            </div>
+        </div>
+    </div>
+</footer>
+<footer class="copyrights">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12  col-sm-6">
+                © Copyright 2016.
+            </div>
+            <div class="col-xs-12  col-sm-6">
+                <div class="copyrights--right">
+                    Made by <a href="http://twitter.com/hootlex" target="_blank">Alex Kyriakidis</a> and <a
+                        href="http://twitter.com/kostaskafcas" target="_blank">Kostas Maniatis</a>.
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="/build/js/theme-d7e8a6ef1b.js"></script>
+<script id="dsq-count-scr" src="//vuejsnews.disqus.com/count.js" async></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="//cdn.embed.ly/jquery.embedly-3.1.2.min.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">window.NREUM || (NREUM = {});
+NREUM.info = {
+    "beacon": "bam.nr-data.net",
+    "licenseKey": "2e9171e69e",
+    "applicationID": "8534583",
+    "transactionName": "ZlBQZkdYXhAFVkdbCV8aZ0BcFlkNAFBLHBZZRQ==",
+    "queueTime": 0,
+    "applicationTime": 320,
+    "atts": "ShdTEA9CTR4=",
+    "errorBeacon": "bam.nr-data.net",
+    "agent": ""
+}</script>
+</body>
+</html>
