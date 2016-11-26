@@ -24,6 +24,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/category/{categories}', ['as' => 'web.category', 'uses' => 'PagesController@category']);
 
 });
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -56,6 +57,7 @@ Route::group(['prefix' => 'api', 'middleware' => 'api', 'namespace' => 'Api'], f
     Route::resource('admin','AdminController');
     Route::resource('user','UserController');
 });
+
 /*
 |--------------------------------------------------------------------------
 | Dashboard Routes
@@ -66,6 +68,7 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'authorized:view-dashboar
         return view('admin.index');
     })->where('vue_capture', '[\/\w\.-]*');
 });
+
 /*
 |--------------------------------------------------------------------------
 | Auth Routes

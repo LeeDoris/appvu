@@ -23,10 +23,10 @@
 @foreach($posts as $post)
 <article class="clearfix blogpost object-non-visible">
     <div class="overlay-container">
-        <img src="{{ url('$post->image_url') or 'http://lorempixel.com/400/200'}}" alt="" width="748px" height="462" style="border-top-right-radius: 6px;
+        <img src="{{ $post->image_url or 'http://lorempixel.com/400/200'}}" alt="" width="748px" height="462" style="border-top-right-radius: 6px;
         border-top-left-radius: 6px;">
     </div>
-    <div class="blogpost-body">git
+    <div class="blogpost-body">
         <div class="post-info">
             <span class="day">{{ $post->created_at->format('d') }}</span>
             <span class="month">{{ $post->created_at->format('M Y') }}</span>
