@@ -42,11 +42,14 @@ class PostsRepo
         return $posts;
     }
 
-    public static function getCategoryCategories(){
-        $category = Category::whereSlug('category')->firstOrFail();
-        $posts = self::getCategoryCategories($category);
-        return $posts;
-    }
+//    public static function getBackgroundCategories(){
+//        $category = Category::whereSlug('background')->firstOrFail();
+//        return $category;
+//    }
+//    public static function getBackgroundCategory(){
+//        $category = self::getBackgroundCategories()->first();
+//        return $category;
+//    }
 
     /**
      * @return Post

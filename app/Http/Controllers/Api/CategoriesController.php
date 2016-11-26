@@ -85,15 +85,15 @@ class CategoriesController extends ApiController
     {
         if($request['file']->isValid()){
             if($category->hasMedia()){
-                foreach ($category->getMedia('category') as $media) {
+                foreach ($category->getMedia('background') as $media) {
                     $media->delete();
                 }
             }
             //when we are working on local don't upload images to s3
             if( env('APP_ENV') == 'local'){
-                $category->addMedia($request->file('file'))->preservingOriginal()->toCollectionOnDisk('category', 'local-media');
+                $category->addMedia($request->file('file'))->preservingOriginal()->toCollectionOnDisk('background', 'local-media');
             } else {
-                $category->addMedia($request->file('file'))->preservingOriginal()->toMediaLibrary('category');
+                $category->addMedia($request->file('file'))->preservingOriginal()->toMediaLibrary('background');
             }
 
         }
@@ -102,7 +102,7 @@ class CategoriesController extends ApiController
         }
 
         // fetch category again since media seems to be cached :(
-        $category = Category::withPostponed()->findOrFail($category->id);
+        $category = Category::findOrFail($category->id);
         return $this->respondWith($category, new CategoryTransformer);
     }
 
