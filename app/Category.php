@@ -8,6 +8,8 @@ use Hashids;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use Spatie\MediaLibrary\HasMedia\Interfaces\HasMedia;
+use Hootlex\Moderation\Moderatable;
+use Hootlex\Moderation\Status;
 
 /**
  * App\Category
@@ -22,6 +24,7 @@ use Spatie\MediaLibrary\HasMedia\Interfaces\HasMedia;
  * @method static \Illuminate\Database\Query\Builder|\App\Category whereId($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Category whereName($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Category whereDescription($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Category whereImage($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Category whereSlug($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Category whereIcon($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Category whereCreatedAt($value)
@@ -64,7 +67,7 @@ class Category extends Model implements HasMedia
      */
     public function getImageUrlAttribute()
     {
-        return $this->hasMedia() ? $this->getFirstMedia('category')->getUrl() : null;
+        return $this->hasMedia() ? $this->getFirstMedia('background')->getUrl() : null;
     }
     /**
      * Return the sluggable configuration array for this model.
