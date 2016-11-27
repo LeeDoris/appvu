@@ -126,7 +126,9 @@ class Post extends Model implements HasMedia
      */
     public function getImageUrlAttribute()
     {
-        return $this->hasMedia() ? $this->getFirstMedia('featured')->getUrl() : null;
+        $url = $this->hasMedia() ? $this->getFirstMedia('featured')->getUrl() : null;
+        $url = public_path($url);
+        return $url;
     }
 
     /**

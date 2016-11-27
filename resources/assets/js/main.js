@@ -40,11 +40,11 @@ router.map({
     },
     '/admin/:hashid/edit': {
         name: 'editadmins',
-        component: require('./components/admin/EditAdmin.vue')
+        component: require('./components/admin/Editadmin.vue')
     },
     '/admin/create': {
         name: 'createadmins',
-        component: require('./components/admin/CreateAdmin.vue')
+        component: require('./components/admin/Createadmin.vue')
     },
     //users
     '/users/': {
