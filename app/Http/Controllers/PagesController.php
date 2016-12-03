@@ -28,7 +28,7 @@ class PagesController extends Controller
      */
     public function post(Post $post){
         $pagination_results = config('chatter.paginate.num_of_results');
-        $discussions = Discussion::with('user')->with('reply')->with('replysCount')->where('chatter_category_id', '=', $post->id)->orderBy('created_at', 'DESC')->paginate($pagination_results);
+        $discussions = Discussion::with('user')->with('reply')->where('chatter_category_id', '=', $post->id)->orderBy('created_at', 'DESC')->paginate($pagination_results);
         $replys = Reply::with('user')->get();
         return view(config('theme.default.pages').'.post',compact('discussions','replys'))->withPost($post);
     }

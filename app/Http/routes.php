@@ -23,8 +23,8 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/blog/{posts}', ['as' => 'web.post', 'uses' => 'PagesController@post']);
     Route::get('/category/{categories}', ['as' => 'web.category', 'uses' => 'PagesController@category']);
     //Comment
-    Route::resource('comment/discussion', 'DiscussionController@store');
-    Route::resource('comment/reply', 'ReplyController@store');
+    Route::resource('comment/discussion', 'DiscussionController@store',['only' => ['store']]);
+    Route::resource('comment/reply', 'ReplyController@store', ['only' => ['store']]);
 
 });
 

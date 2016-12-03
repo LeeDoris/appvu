@@ -138,14 +138,6 @@ class Post extends Model implements HasMedia
         return $this->hasMany(Discussion::class);
     }
 
-    /**
-     * Count Discussion
-     * @return string|null
-     */
-    public function discussionCount()
-    {
-        return $this->discussions()->selectRaw('chatter_category_id, count(*) as total')->groupBy('chatter_category_id');
-    }
 
     /**
      * Return the sluggable configuration array for this model.
