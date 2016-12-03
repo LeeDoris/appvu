@@ -15,6 +15,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Theme CSS -->
+
     <link href="{{ asset('css/customer.css') }}" rel="stylesheet">
     <link href="{{ asset('css/clean-blog.css') }}" rel="stylesheet">
 
@@ -32,6 +33,9 @@
     <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('img/apple-touch-icon-114.png') }}">
     <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('img/apple-touch-icon-144.png') }}">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
 
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

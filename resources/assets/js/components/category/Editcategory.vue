@@ -26,7 +26,7 @@
       <div class="form-group">
         <label for="image" class="col-sm-1 control-label">Image</label>
         <div class="col-sm-5">
-          <dropzone :model='category.image' :action="'/api/categories/'+categoryId+'/image'"></dropzone>
+          <dropzone :model='category.image' :action="'/api/categories/p5104/image'"></dropzone>
         </div>
       </div>
 

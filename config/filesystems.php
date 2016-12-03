@@ -45,7 +45,6 @@ return [
         'local-media' => [
             'driver' => 'local',
             'root'   => public_path().'/img/posts',
-            'visibility' => 'public',
         ],
         'local' => [
             'driver' => 'local',

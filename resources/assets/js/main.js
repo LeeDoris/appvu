@@ -17,7 +17,7 @@ var router = new VueRouter({
 
 
 router.map({
-    '/': {
+    '/home': {
         component: require('./components/Home.vue')
     },
     //post
@@ -71,8 +71,16 @@ router.map({
     '/categories/:hashid/edit': {
         name: 'categories',
         component: require('./components/category/Editcategory.vue')
-    }
-
+    },
+    //comment
+    '/comment': {
+        name:'comment',
+        component: require('./components/comment/Comment.vue')
+    },
+    '/reply': {
+        name:'reply',
+        component: require('./components/comment/Reply.vue')
+    },
 })
 
 router.alias({

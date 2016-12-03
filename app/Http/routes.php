@@ -22,6 +22,9 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('blog', ['as' => 'web.blog', 'uses' => 'PagesController@home']);
     Route::get('/blog/{posts}', ['as' => 'web.post', 'uses' => 'PagesController@post']);
     Route::get('/category/{categories}', ['as' => 'web.category', 'uses' => 'PagesController@category']);
+    //Comment
+    Route::resource('comment/discussion', 'DiscussionController@store');
+    Route::resource('comment/reply', 'ReplyController@store');
 
 });
 
@@ -37,6 +40,7 @@ Route::group(['prefix' => 'api', 'middleware' => 'api', 'namespace' => 'Api'], f
     Route::resource('posts', 'PostsController', ['except' => ['create', 'edit']]);
 
     //categories
+    Route::post('categories/{categories}/publish', ['as' => 'api.categories.publish', 'uses' => 'CategoriesController@publish']);
     Route::post('categories/{categories}/image', ['as' => 'api.categories.updateImage', 'uses' => 'CategoriesController@updateImage']);
     Route::resource('categories', 'CategoriesController', ['except' => ['create', 'edit']]);
 
@@ -49,13 +53,16 @@ Route::group(['prefix' => 'api', 'middleware' => 'api', 'namespace' => 'Api'], f
 
     //users
     Route::get('me', ['as' => 'api.me.show', 'uses' => 'MeController@show']);
-//    Route::get('me', ['as' => 'api.me.showadmin', 'uses' => 'MeController@showAdmin']);
-//    Route::get('me', ['as' => 'api.me.notadmin', 'uses' => 'MeController@notAdmin']);
     Route::patch('me', ['as' => 'api.me.update', 'uses' => 'MeController@update']);
     Route::put('me', ['as' => 'api.me.update', 'uses' => 'MeController@update']);
+
     //admin
     Route::resource('admin','AdminController');
     Route::resource('user','UserController');
+
+    //Comment
+    Route::resource('discussion','CommentController', ['only' => ['index', 'destroy']]);
+    Route::resource('reply','ReplyController', ['only' => ['index', 'destroy']]);
 });
 
 /*

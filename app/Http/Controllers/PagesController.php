@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Acme\PostsRepo;
 use App\Category;
 use App\Post;
+use App\Discussion;
+use App\Reply;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -25,7 +27,10 @@ class PagesController extends Controller
      * @param \App\Post $post
      */
     public function post(Post $post){
-        return view(config('theme.default.pages').'.post')->withPost($post);
+        $pagination_results = config('chatter.paginate.num_of_results');
+        $discussions = Discussion::with('user')->with('reply')->with('replysCount')->where('chatter_category_id', '=', $post->id)->orderBy('created_at', 'DESC')->paginate($pagination_results);
+        $replys = Reply::with('user')->get();
+        return view(config('theme.default.pages').'.post',compact('discussions','replys'))->withPost($post);
     }
 
     /**

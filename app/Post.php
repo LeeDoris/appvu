@@ -126,9 +126,25 @@ class Post extends Model implements HasMedia
      */
     public function getImageUrlAttribute()
     {
-        $url = $this->hasMedia() ? $this->getFirstMedia('featured')->getUrl() : null;
-        $url = public_path($url);
-        return $url;
+        return $this->hasMedia() ? $this->getFirstMedia('featured')->getUrl() : null;
+    }
+
+    /**
+     * Get Discussion
+     * @return string|null
+     */
+    public function discussions()
+    {
+        return $this->hasMany(Discussion::class);
+    }
+
+    /**
+     * Count Discussion
+     * @return string|null
+     */
+    public function discussionCount()
+    {
+        return $this->discussions()->selectRaw('chatter_category_id, count(*) as total')->groupBy('chatter_category_id');
     }
 
     /**

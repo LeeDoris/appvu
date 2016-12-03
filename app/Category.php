@@ -4,12 +4,10 @@ namespace App;
 
 use Acme\Traits\HashOrSlugScope;
 use Cviebrock\EloquentSluggable\Sluggable;
-use Hashids;
+use Vinkla\Hashids\Facades\Hashids;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use Spatie\MediaLibrary\HasMedia\Interfaces\HasMedia;
-use Hootlex\Moderation\Moderatable;
-use Hootlex\Moderation\Status;
 
 /**
  * App\Category
@@ -67,7 +65,7 @@ class Category extends Model implements HasMedia
      */
     public function getImageUrlAttribute()
     {
-        return $this->hasMedia() ? $this->getFirstMedia('background')->getUrl() : null;
+        return $this->hasMedia() ? $this->getFirstMediaUrl('background') : null;
     }
     /**
      * Return the sluggable configuration array for this model.

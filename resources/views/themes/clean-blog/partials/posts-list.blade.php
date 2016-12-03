@@ -34,14 +34,14 @@
         <div class="blogpost-content">
             <header>
                 <h2 class="title"><a href="{{route('web.post', $post->slug)}}">{{ $post->title }}</a></h2>
-                <div class="submitted"><i class="fa fa-user pr-5"></i> by <a href="#">{{$post->owner->name}}</a></div>
+                <div class="submitted"><i class="fa fa-user pr-5"></i> by <a href="javascript:;">{{$post->owner->name}}</a></div>
             </header>
             <p>{{ $post->description }}</p>
         </div>
     </div>
     <footer class="clearfix">
         <ul class="links pull-left">
-            <li><i class="fa fa-comment-o pr-5"></i> <a href="#">22 comments</a> </li>
+            <li><i class="fa fa-comment-o pr-5"></i> <a href="{{route('web.post', $post->slug)}} #chatter">Comment</a> </li>
         </ul>
         <a class="pull-right link" href="{{route('web.post', $post->slug)}}"><span>Read more</span></a>
     </footer>

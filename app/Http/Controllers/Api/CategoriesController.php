@@ -67,7 +67,7 @@ class CategoriesController extends ApiController
     public function update(Request $request, Category $category)
     {
         $category->fill($request->all());
-        $category->slug = null;
+//        $category->slug = null;
         $category->save();
 
         return $this->respondWith($category, new CategoryTransformer);
@@ -118,7 +118,6 @@ class CategoriesController extends ApiController
     public function destroy(Category $category)
     {
         $category->delete();
-
         return $this->respondWithArray([
             'success' => true,
             'message' => 'Successfully deleted category.'

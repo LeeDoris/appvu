@@ -4,6 +4,8 @@ namespace Acme;
 
 use App\Category;
 use App\Post;
+use App\Discussion;
+use App\Reply;
 
 class PostsRepo
 {
@@ -15,7 +17,6 @@ class PostsRepo
      */
     public static function getPosts($perPage = null, $includes = []){
         $builder = Post::orderBy('posts.moderated_at', 'DESC')->with($includes);
-
         return self::paginateOrGet($builder, $perPage);;
     }
 
@@ -41,15 +42,6 @@ class PostsRepo
         $posts = self::getCategoryPosts($featured);
         return $posts;
     }
-
-//    public static function getBackgroundCategories(){
-//        $category = Category::whereSlug('background')->firstOrFail();
-//        return $category;
-//    }
-//    public static function getBackgroundCategory(){
-//        $category = self::getBackgroundCategories()->first();
-//        return $category;
-//    }
 
     /**
      * @return Post
