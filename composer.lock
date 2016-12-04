@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5185cbc71a56abafe031036925d9e1a5",
-    "content-hash": "695061dec8b8ac38c9ade5354fcdc6d5",
+    "hash": "664133d80bda3b979ea86d74347bc1ec",
+    "content-hash": "d5668cdb0e0986e614e82b6b1012ff0a",
     "packages": [
         {
             "name": "anahkiasen/underscore-php",
@@ -466,6 +466,42 @@
                 "laravel5"
             ],
             "time": "2016-08-11 04:34:23"
+        },
+        {
+            "name": "devdojo/chatter",
+            "version": "0.1.22",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thedevdojo/chatter.git",
+                "reference": "e5ab675c23a948a6ca91436cec05f80dded911b1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thedevdojo/chatter/zipball/e5ab675c23a948a6ca91436cec05f80dded911b1",
+                "reference": "e5ab675c23a948a6ca91436cec05f80dded911b1",
+                "shasum": ""
+            },
+            "require-dev": {
+                "illuminate/cache": "~5.1.20|5.2.*|5.3.*",
+                "illuminate/console": "~5.1.20|5.2.*|5.3.*",
+                "mockery/mockery": "^0.9.5",
+                "phpunit/phpunit": "^4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DevDojo\\Chatter\\": "/src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Tony Lea",
+                    "email": "tony@devdojo.com"
+                }
+            ],
+            "description": "A simple forum package for your laravel app",
+            "time": "2016-09-06 15:48:13"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",

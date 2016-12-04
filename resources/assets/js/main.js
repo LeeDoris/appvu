@@ -81,6 +81,23 @@ router.map({
         name:'reply',
         component: require('./components/comment/Reply.vue')
     },
+    //forum
+    '/chattercategory': {
+        name:'chattercategory',
+        component: require('./components/forum/Category.vue')
+    },
+    '/chattercategory/:id/edit': {
+        name: 'chattercategoryedit',
+        component: require('./components/forum/Editcategory.vue')
+    },
+    '/chatterdiscussion': {
+        name:'chatterdiscussion',
+        component: require('./components/forum/Discussion.vue')
+    },
+    '/chatterpost': {
+        name:'chatterpost',
+        component: require('./components/forum/Post.vue')
+    },
 })
 
 router.alias({
@@ -89,6 +106,7 @@ router.alias({
     // the dynamic segment names must match
     '/posts/:hashid': '/posts/:hashid/edit',
     'categories/:hashid': '/categories/:hashid/edit',
+    'chattercategory/:hashid': '/chattercategory/:hashid/edit',
     '/users/:hashid': '/users/:hashid/edit',
     '/admin/:hashid': '/admin/:hashid/edit'
 })

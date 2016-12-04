@@ -19,6 +19,9 @@
                     </li>
                 @endforeach
                 <li>
+                    <a href="/{{ Config::get('chatter.routes.home') }}">Forums &nbsp;<i class="fa fa-comments"></i></a>
+                </li>
+                <li>
                     <a href="">SUBMIT YOURS &nbsp;<i class="fa fa-pencil-square-o"></i></a>
                 </li>
             </ul>

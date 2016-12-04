@@ -14,7 +14,7 @@
     <li class="header">MAIN NAVIGATION</li>
     <li v-for="item in list | filterBy menuFilter in 'name'" :class='{treeview:item.child,active:$route.path.indexOf(item.path)>=0}'>
         <a v-link="{path:item.path}" v-if='!item.child'>
-            <i class="fa fa-th"></i>
+            <i :class="item.class"></i>
             <span>{{item.name}}</span>
         </a>
         <a v-if='item.tree'>

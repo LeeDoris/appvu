@@ -63,6 +63,11 @@ Route::group(['prefix' => 'api', 'middleware' => 'api', 'namespace' => 'Api'], f
     //Comment
     Route::resource('discussion','CommentController', ['only' => ['index', 'destroy']]);
     Route::resource('reply','ReplyController', ['only' => ['index', 'destroy']]);
+
+    //Forum
+    Route::resource('chattercategory','ChatterCategoryController', ['except' => ['create', 'edit']]);
+    Route::resource('chatterdiscussion','ChatterDiscussionController', ['only' => ['index', 'destroy']]);
+    Route::resource('chatterpost','ChatterPostController', ['only' => ['index', 'destroy']]);
 });
 
 /*

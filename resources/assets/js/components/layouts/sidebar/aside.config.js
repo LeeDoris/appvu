@@ -2,6 +2,10 @@ module.exports = [
     {name: 'Home', path: '/home', tree: false, class:'fa fa-home'},
     {name: 'Posts', path: '/posts', tree: false, class:'fa fa-files-o'},
     {name: 'Category', path: '/categories', tree: false, class:'fa fa-sitemap'},
+    {name: 'Forum', path: '/chattercategory', tree: true, child: [
+        {name: 'Category', path: '/chattercategory'},
+        {name: 'Discussion', path: '/chatterdiscussion'},
+        {name: 'Post', path: '/chatterpost'}], class:'fa fa-comments'},
     {name: 'Comment', path: '/comment', tree: true, child: [
       {name: 'Comment', path: '/comment'},
       {name: 'Reply', path: '/reply'}], class:'fa fa-comment'},
