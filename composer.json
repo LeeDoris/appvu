@@ -21,7 +21,8 @@
         "larapack/config-writer": "1.*",
         "eusonlito/laravel-meta": "^3.0",
         "ezyang/htmlpurifier": "^4.8",
-        "devdojo/chatter": "0.1.*"
+        "devdojo/chatter": "0.1.*",
+        "nicolaslopezj/searchable": "^1.9"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

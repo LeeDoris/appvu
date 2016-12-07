@@ -18,6 +18,8 @@
 
     <link href="{{ asset('css/customer.css') }}" rel="stylesheet">
     <link href="{{ asset('css/clean-blog.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/htmleaf-demo.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700:latin' rel='stylesheet' type='text/css'>
@@ -36,6 +38,7 @@
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="{{ asset('js/modernizr.js') }}"></script>
 
 
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

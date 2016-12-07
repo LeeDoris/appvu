@@ -23,7 +23,7 @@
 @foreach($posts as $post)
 <article class="clearfix blogpost object-non-visible">
     <div class="overlay-container">
-        <img src="{{ $post->image_url or 'http://lorempixel.com/400/200'}}" alt="" width="748px" height="462" style="border-top-right-radius: 6px;
+        <img src="{{ $post->image_url or 'http://lorempixel.com/400/200'}}" alt="" width="100%" height="62%" style="border-top-right-radius: 6px;
         border-top-left-radius: 6px;">
     </div>
     <div class="blogpost-body">
