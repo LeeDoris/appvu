@@ -1,20 +1,16 @@
 /*
- * jQuery Superfish Menu Plugin
- * Copyright (c) 2013 Joel Birch
- *
- * Dual licensed under the MIT and GPL licenses:
- *	http://www.opensource.org/licenses/mit-license.php
- *	http://www.gnu.org/licenses/gpl.html
+ This is Dashboard.
  */
-
 $(function(){
     $("#nav-mark-btn").hover(function(){
         $("#mark-info").show();
     },function(){
         $("#mark-info").hide();
     })
-})
-
+});
+/*
+ This is Search.
+ */
 jQuery(document).ready(function($){
     var resizing = false,
         navigationWrapper = $('.cd-main-nav-wrapper'),
@@ -82,7 +78,7 @@ jQuery(document).ready(function($){
             searchTrigger.addClass('search-form-visible');
             coverLayer.addClass('search-form-visible');
             searchForm.addClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
-                searchForm.find('input[type="search"]').focus().end().off('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
+                searchForm.find('.selectize-input > input').focus().end().off('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
             });
         }
     });
@@ -103,5 +99,45 @@ jQuery(document).ready(function($){
     //upadate span.selected-value text when user selects a new option
     searchForm.on('change', 'select', function(){
         searchForm.find('.selected-value').text($(this).children('option:selected').text());
+    });
+});
+/*
+ This is Selectize.
+ */
+$(document).ready(function(){
+    $('#searchbox').selectize({
+        valueField: 'url',
+        labelField: 'title',
+        searchField: ['title'],
+        maxOptions: 10,
+        options: [],
+        create: false,
+        render: {
+            option: function(item, escape) {
+                return '<div class="selectize-dropdown-word"><img src="' + item.image + '" style="width: 50px; height: 45px;">' + escape(item.title) + '</div>';
+            }
+        },
+        optgroups: [
+        ],
+        load: function(query, callback) {
+            if (!query.length) return callback();
+            $.ajax({
+                url: 'http://localhost:8000/search',
+                type: 'GET',
+                dataType: 'json',
+                data: {
+                    q: query
+                },
+                error: function() {
+                    callback();
+                },
+                success: function(res) {
+                    callback(res.data);
+                }
+            });
+        },
+        onChange: function(){
+            window.location = this.items[0];
+        }
     });
 });

@@ -25,6 +25,8 @@ Route::group(['middleware' => 'web'], function () {
     //Comment
     Route::resource('comment/discussion', 'DiscussionController@store',['only' => ['store']]);
     Route::resource('comment/reply', 'ReplyController@store', ['only' => ['store']]);
+    //Search
+    Route::get('search', 'Api\SearchController@index');
 
 });
 

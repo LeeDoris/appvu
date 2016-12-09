@@ -40,7 +40,8 @@ class PostTransformer extends TransformerAbstract
             'description' => $post->description,
             'image' => $post->image_url,
             'content' => $post->content,
-            'status' => $post->getHumanStatus()
+            'status' => $post->getHumanStatus(),
+            'url' => route('web.post', $post->slug)
         ];
     }
 

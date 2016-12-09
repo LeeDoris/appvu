@@ -54,10 +54,6 @@ class Post extends Model implements HasMedia
 
     protected $fillable = ['title', 'slug', 'description', 'content'];
 
-    public static function search($query)
-    {
-    }
-
     /**
      * The user that belong to the post.
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo

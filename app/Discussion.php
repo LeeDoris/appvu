@@ -29,12 +29,12 @@ class Discussion extends Model {
         return $this->hasMany(Reply::class, 'chatter_discussion_id')->orderBy('created_at', 'ASC');
     }
 
-    public function replyCount()
-    {
-        return $this->replys()
-            ->selectRaw('chatter_discussion_id, count(*) as total')
-            ->groupBy('chatter_discussion_id');
-    }
+//    public function replyCount()
+//    {
+//        return $this->replys()
+//            ->selectRaw('chatter_discussion_id, count(*) as total')
+//            ->groupBy('chatter_discussion_id');
+//    }
     public static function stringToColorCode($str) {
         $code = dechex(crc32($str));
         $code = substr($code, 0, 6);

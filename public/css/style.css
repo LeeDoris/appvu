@@ -78,6 +78,13 @@ Patterns - reusable parts of our design
 Header
 
 -------------------------------- */
+.cd-main-header {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+}
 .cd-main-header.nav-is-visible {
   -webkit-transform: translateX(-260px);
   -moz-transform: translateX(-260px);
@@ -520,7 +527,7 @@ Search Form
     opacity: .8;
   }
   .cd-search-suggestions time {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     color: #70727d;
   }
   .cd-search-suggestions .news li {
@@ -646,8 +653,8 @@ Search Form
   }
   .cd-search-trigger::before {
     /* background circle */
-    left: 60%;
-    top: 60%;
+    left: 63%;
+    top: 72%;
     -webkit-transform: translateX(-50%) translateY(-50%) scale(0);
     -moz-transform: translateX(-50%) translateY(-50%) scale(0);
     -ms-transform: translateX(-50%) translateY(-50%) scale(0);
@@ -656,6 +663,9 @@ Search Form
     height: 70%;
     width: 70%;
     background-color: rgb(0,151,167);
+    -moz-opacity:0.4;
+    opacity:0.4;
+    filter:alpha(opacity=40);
     border-radius: 50%;
     -webkit-transition: -webkit-transform 0.3s;
     -moz-transition: -moz-transform 0.3s;
@@ -698,7 +708,7 @@ Content cover layer
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.2);
     opacity: 0;
     visibility: hidden;
     -webkit-transition: opacity 0.3s, visibility 0.3s;

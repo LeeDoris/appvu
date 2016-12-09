@@ -20,6 +20,7 @@
     <link href="{{ asset('css/clean-blog.css') }}" rel="stylesheet">
     <link href="{{ asset('css/htmleaf-demo.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/selectize/css/selectize.bootstrap3.css') }}" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700:latin' rel='stylesheet' type='text/css'>
